@@ -100,8 +100,6 @@ get_prebuilts() {
 	mkdir -p ${MODULE_TEMPLATE_DIR}/bin/arm64 ${MODULE_TEMPLATE_DIR}/bin/arm ${MODULE_TEMPLATE_DIR}/bin/x86 ${MODULE_TEMPLATE_DIR}/bin/x64
 	dl_if_dne "${MODULE_TEMPLATE_DIR}/bin/arm64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-arm64-v8a"
 	dl_if_dne "${MODULE_TEMPLATE_DIR}/bin/arm/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-armeabi-v7a"
-	dl_if_dne "${MODULE_TEMPLATE_DIR}/bin/x86/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86"
-	dl_if_dne "${MODULE_TEMPLATE_DIR}/bin/x64/cmpr" "https://github.com/j-hc/cmpr/releases/latest/download/cmpr-x86_64"
 }
 
 config_update() {
@@ -159,7 +157,7 @@ _req() {
 		mv -f "$dlp" "$2"
 	fi
 }
-req() { _req "$1" "$2" "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
+req() { _req "$1" "$2" "User-Agent: Mozilla/5.0 (Linux; Android 14) Gecko/20100101 Chrome/121.0.6167.143 Firefox/122.0"; }
 gh_req() { _req "$1" "$2" "$GH_HEADER"; }
 
 log() { echo -e "$1  " >>"build.md"; }
@@ -262,36 +260,6 @@ get_apkmirror_resp() {
 }
 # --------------------------------------------------
 
-# -------------------- uptodown --------------------
-get_uptodown_resp() {
-	__UPTODOWN_RESP__=$(req "${1}/versions" -)
-	__UPTODOWN_RESP_PKG__=$(req "${1}/download" -)
-}
-get_uptodown_vers() { $HTMLQ --text ".version" <<<"$__UPTODOWN_RESP__"; }
-dl_uptodown() {
-	local uptodown_dlurl=$1 version=$2 output=$3
-	local url
-	url=$(grep -F "${version}</span>" -B 2 <<<"$__UPTODOWN_RESP__" | head -1 | sed -n 's;.*data-url=".*download\/\(.*\)".*;\1;p') || return 1
-	url="https://dw.uptodown.com/dwn/$(req "${uptodown_dlurl}/post-download/${url}" - | sed -n 's;.*class="post-download" data-url="\(.*\)".*;\1;p')" || return 1
-	req "$url" "$output"
-}
-get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)" <<<"$__UPTODOWN_RESP_PKG__"; }
-# --------------------------------------------------
-
-# -------------------- apkmonk ---------------------
-get_apkmonk_resp() {
-	__APKMONK_RESP__=$(req "${1}" -)
-	__APKMONK_PKG_NAME__=$(awk -F/ '{print $NF}' <<<"$1")
-}
-get_apkmonk_vers() { grep -oP 'download_ver.+?>\K([0-9,\.]*)' <<<"$__APKMONK_RESP__"; }
-dl_apkmonk() {
-	local url=$1 version=$2 output=$3
-	url="https://www.apkmonk.com/down_file?pkg="$(grep -F "$version</a>" <<<"$__APKMONK_RESP__" | grep -oP 'href=\"/download-app/\K.+?(?=/?\">)' | sed 's;/;\&key=;') || return 1
-	url=$(req "$url" - | grep -oP 'https.+?(?=\",)') || return 1
-	req "$url" "$output"
-}
-get_apkmonk_pkg_name() { echo "$__APKMONK_PKG_NAME__"; }
-# --------------------------------------------------
 dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4
 	local path version=${version// /}
