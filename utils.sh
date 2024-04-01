@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MODULE_TEMPLATE_DIR="revanced-extended"
+MODULE_TEMPLATE_DIR="revanced-magisk"
 TEMP_DIR="temp"
 BIN_DIR="bin"
 BUILD_DIR="build"
