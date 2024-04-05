@@ -34,6 +34,6 @@ cli-source = "anddea/revanced-cli"
 rv-brand = "ReVanced Extended"
 build-mode = "module"
 #archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
-apkmirror-dlurl = https://www.apkmirror.com/apk/google-inc/youtube
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 
 
