@@ -111,3 +111,17 @@ jobs:
           skip_checkout: true
           file_pattern: build.md *-update.json
           commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+
+      - uses: actions/upload-artifact@v4.3.1
+        with:
+          name: logs
+          path: logs
+          if-no-files-found: ignore
+      - name: Delete Older Releases
+        uses: dev-drprasad/delete-older-releases@v0.3.3
+        with:
+          repo: AbakNacchan/revanced-extended # defaults to current repo
+          keep_latest: 35
+          delete_tags: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
