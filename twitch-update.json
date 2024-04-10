@@ -1,6 +1,6 @@
 {
-  "version": "v18.9.0",
-  "versionCode": 2,
-  "zipUrl": "https://github.com/AppazKnarf/revanced-extended/releases/download/2/twitch-revanced-extended-magisk-v18.9.0-all.zip",
+  "version": "v19.0.1",
+  "versionCode": 3,
+  "zipUrl": "https://github.com/AppazKnarf/revanced-extended/releases/download/3/twitch-revanced-extended-magisk-v19.0.1-all.zip",
   "changelog": "https://raw.githubusercontent.com/AppazKnarf/revanced-extended/update/build.md"
 }
