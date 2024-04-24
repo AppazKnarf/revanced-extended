@@ -1,6 +1,6 @@
-Twitch: 19.1.0  
-YouTube: 19.11.43  
-Tiktok: 34.4.1  
+YouTube: 19.14.43  
+Twitch: 19.2.0  
+Tiktok: 34.4.4  
 - To use YouTube and YouTube Music without root, install [MicroG-RE](https://github.com/WSTxda/MicroG-RE/releases/latest).  
 - To detach YouTube and YouTube Music from Play Store, use [zygisk-detach](https://github.com/j-hc/zygisk-detach) module.  
 
