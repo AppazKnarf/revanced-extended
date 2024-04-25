@@ -8,9 +8,9 @@ enable-magisk-update = true
 [YouTube]
 app-name = "YouTube"
 build-mode = "both"
-included-patches = "'Add splash animation' 'MaterialYou' 'Remove player controls background' 'Enable slide to seek'"
-excluded-patches = "'Custom branding name YouTube' 'Announcements' 'Enable debugging' 'Change player flyout panel toggles'"
-version = "19.14.43"
+included-patches = "'Add splash animation' 'MaterialYou' 'Force hide player buttons background' 'Hide animated button background' 'Hide player buttons background' 'Spoof player parameters' 'Enable slide to seek' 'Remove player controls background' 'Enable slide to seek' 'Custom branding icon YouTube'"
+excluded-patches = "'Custom branding name YouTube' 'Announcements' 'Enable debugging'"
+version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 arch = "arm64-v8a"
 apkmirror-arch = "arm64-v8a"
@@ -18,7 +18,7 @@ apkmirror-arch = "arm64-v8a"
 [Music]
 # enabled = false
 build-mode = "both"
-version = "latest"
+version = "6.46.53"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 apkmirror-arch = "arm64-v8a"
 included-patches = "'Permanent shuffle' 'Permanent repeat'"
