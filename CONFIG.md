@@ -4,6 +4,8 @@ Adding another ReVanced app is as easy as this:
 ```toml
 [App Name]
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
+# or uptodown-dlurl = "https://app.en.uptodown.com/android"
+# or apkmonk-dlurl = "https://www.apkmonk.com/app/com.app.app/"
 ```
 
 ## More about other options:
@@ -15,11 +17,11 @@ There is existing example below with all defaults shown and all the keys explici
 parallel-jobs = 1
 # Amount of cores to use for parallel patching, if not set nproc is used
 patches-source = "inotia00/revanced-patches"
-# Where to fetch patches bundle from ― default: "inotia00/revanced-patches"
+# Where to fetch patches bundle from ― default: "anddea/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
-# Where to fetch integrations from ― default: "inotia00/revanced-integrations"
-cli-source = "inotia00/revanced-cli"
-# Where to fetch cli from ― default: "inotia00/revanced-cli"
+# Where to fetch integrations from ― default: "anddea/revanced-integrations"
+cli-source = "j-hc/revanced-cli"
+# Where to fetch cli from ― default: "j-hc/revanced-cli"
 # options like cli-source can also set per app
 rv-brand = "ReVanced eXtended"
 # Rebrand from 'ReVanced eXtended' to something different ― default: "ReVanced eXtended"
@@ -52,6 +54,8 @@ included-patches = "'Some Patch' 'Some Other Patch'"
 exclusive-patches = false
 # Exclude all patches by default ― default: false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
+uptodown-dlurl = "https://app.en.uptodown.com/android"
+apkmonk-dlurl = "https://www.apkmonk.com/app/com.app.app/"
 module-prop-name = "app-magisk"
 # Magisk module prop name.
 apkmirror-dpi = "360-480dpi"
