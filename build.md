@@ -1,3 +1,4 @@
+YouTube: 19.16.38  
 Twitch: 19.4.0  
 Tiktok: 34.5.5  
 - To use YouTube and YouTube Music without root, install [MicroG-RE](https://github.com/WSTxda/MicroG-RE/releases/latest).  
