@@ -1,0 +1,28 @@
+enable-magisk-update = true
+
+# add 'enabled = false' for not patching a specific app or remove it from the config
+# see https://github.com/AbakNacchan/revanced-extended/blob/revanced-extended/CONFIG.md for more detailed explanations
+
+# you can use rvmm-config-gen to generate a config
+
+[YouTube]
+build-mode = "both"
+included-patches = "'Add splash animation' 'MaterialYou' 'Remove player controls background' 'Enable slide to seek'"
+excluded-patches = "'Custom branding name YouTube' 'Announcements' 'Enable debugging' 'Theme' 'Change player flyout panel toggles'"
+version = "beta"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+arch = "arm64-v8a"
+apkmirror-arch = "arm64-v8a"
+
+[Music]
+build-mode = "both"
+version = "latest"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+apkmirror-arch = "arm64-v8a"
+included-patches = "'Permanent shuffle' 'Permanent repeat'"
+excluded-patches = "'Custom branding name YouTube Music'"
+
+[Twitter]
+apkmirror-dlurl = "https://apkmirror.com/apk/twitter-inc/twitter/"
+arch = "arm64-v8a"
+version = "latest"
