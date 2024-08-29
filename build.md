@@ -1,12 +1,11 @@
-YouTube: 19.16.39  
-Tiktok: 35.8.1  
-- To use YouTube and YouTube Music without root, install [MicroG-RE](https://github.com/WSTxda/MicroG-RE/releases/latest).  
-- To detach YouTube and YouTube Music from Play Store, use [zygisk-detach](https://github.com/j-hc/zygisk-detach) module.  
+YouTube: 19.07.40  
+Tiktok: 36.2.4  
+
+Install [mMicroG](https://github.com/inotia00/mMicroG/releases), [Vanced Extended MicroG](https://github.com/inotia00/VancedMicroG/releases), or [Vanced MicroG](https://github.com/TeamVanced/VancedMicroG/releases) for non-root YouTube and YouTube Music.  
+Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) module to detach YouTube and YouTube Music from Play Store.  
 
 Changelog:  
-CLI: j-hc/revanced-cli-4.6.0-all.jar  
-Integrations: anddea/revanced-integrations-0.154.0.apk  
-Patches: anddea/revanced-patches-2.227.0.jar  
-[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v2.227.0)  
-  
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W8VRK0S)  
+CLI: inotia00/revanced-cli-4.6.1-all.jar  
+Integrations: YT-Advanced/revanced-integrations-0.148.4.apk  
+Patches: YT-Advanced/revanced-patches-2.220.10.jar  
+[Changelog](https://github.com/YT-Advanced/ReX-patches/releases/tag/v2.220.10)  
