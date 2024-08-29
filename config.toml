@@ -6,23 +6,18 @@ enable-magisk-update = true
 # you can use rvmm-config-gen to generate a config
 
 [YouTube]
-build-mode = "both"
-included-patches = "'Add splash animation' 'MaterialYou' 'Remove player controls background' 'Enable slide to seek'"
-excluded-patches = "'Custom branding name YouTube' 'Announcements' 'Enable debugging' 'Theme' 'Change player flyout panel toggles'"
-version = "beta"
+app-name = "YouTube"
+build-mode = "module"
+included-patches = "'Add splash animation' 'MaterialYou' 'Force hide player buttons background' 'Hide animated button background' 'Hide player buttons background' 'Spoof player parameters' 'Enable slide to seek' 'Remove player controls background' 'Enable slide to seek' 'Custom branding icon YouTube'"
+excluded-patches = "'Custom branding name YouTube' 'Announcements' 'theme' 'Enable debugging'"
+version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
-arch = "arm64-v8a"
-apkmirror-arch = "arm64-v8a"
 
-[Music]
-build-mode = "both"
-version = "latest"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
-apkmirror-arch = "arm64-v8a"
-included-patches = "'Permanent shuffle' 'Permanent repeat'"
-excluded-patches = "'Custom branding name YouTube Music'"
 
-[Twitter]
-apkmirror-dlurl = "https://apkmirror.com/apk/twitter-inc/twitter/"
-arch = "arm64-v8a"
-version = "latest"
+[Tiktok]
+apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
+build-mode = "module"
+
+[Twitch]
+apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch/"
+build-mode = "module"
